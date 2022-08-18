@@ -15,16 +15,16 @@ else:
             else:
                 if edad >= 18:
                     print("Profesional")
-                    
-if edad >= 3 and edad <= 5:
+      
+if edad < 3:
+    print("Aún no está en edad de asistir a la escuela.")
+elif edad <= 5:
     print("Kinder")
-elif edad >= 6 and edad <= 11:
+elif edad <= 11:
     print("Primaria")
-elif edad >= 12 and edad <= 14:
+elif edad <= 14:
     print("Secundaria")
-elif edad >= 15 and edad <= 17:
+elif edad <= 17:
     print("Preparatoria")
 elif edad >= 18:
     print("Profesional")
-else: # Caso por default
-    print("?")
