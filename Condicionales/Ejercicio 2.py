@@ -3,6 +3,7 @@ print("Bienvenid@ al programa de apoyos.")
 
 edad = int(input("Indroduzca su edad: "))
 
+# Solución 1
 if edad < 35:
     print("Lo sentimos, no tiene la edad requerida para calificar para un apoyo.")
 elif edad <= 50:
@@ -15,7 +16,8 @@ else:
     mayores = int(input("¿Cuántos hijos mayores de edad tienes?: "))
     apoyos = 4500 + menores * 1000 + mayores * 500
     print(f"Usted tiene derecho a un apoyo de ${apoyos:,.2f} pesos.")
-    
+
+# Solución 2
 if edad < 35:
     print("Lo sentimos, no tiene la edad requerida para calificar para un apoyo.")
 else:
