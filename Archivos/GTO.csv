@@ -1,0 +1,50 @@
+Sex ID,Sex,Time to Work ID,Time to Work,Work Mean ID,Work Mean,Population,Share
+1,Hombre,1,Hasta 15 minutos,1,"Camión, taxi, combi o colectivo",1351,0.094866934
+1,Hombre,1,Hasta 15 minutos,3,"Vehículo particular (automóvil, camioneta o motocicleta)",2254,0.158275402
+1,Hombre,1,Hasta 15 minutos,4,Transporte laboral,389,0.027315498
+1,Hombre,1,Hasta 15 minutos,5,Bicicleta,97,0.006811319
+1,Hombre,1,Hasta 15 minutos,6,Caminando,4164,0.292395197
+1,Hombre,1,Hasta 15 minutos,7,Otro,77,0.005406924
+1,Hombre,2,16 a 30 minutos,1,"Camión, taxi, combi o colectivo",6637,0.293958721
+1,Hombre,2,16 a 30 minutos,3,"Vehículo particular (automóvil, camioneta o motocicleta)",3461,0.153290814
+1,Hombre,2,16 a 30 minutos,4,Transporte laboral,1846,0.081761006
+1,Hombre,2,16 a 30 minutos,5,Bicicleta,297,0.013154398
+1,Hombre,2,16 a 30 minutos,6,Caminando,2486,0.110107184
+1,Hombre,2,16 a 30 minutos,7,Otro,33,0.0014616
+1,Hombre,3,31 minutos a 1 hora,1,"Camión, taxi, combi o colectivo",4674,0.299365913
+1,Hombre,3,31 minutos a 1 hora,3,"Vehículo particular (automóvil, camioneta o motocicleta)",1676,0.107346442
+1,Hombre,3,31 minutos a 1 hora,4,Transporte laboral,2745,0.175815026
+1,Hombre,3,31 minutos a 1 hora,5,Bicicleta,59,0.003778902
+1,Hombre,3,31 minutos a 1 hora,6,Caminando,560,0.035867546
+1,Hombre,3,31 minutos a 1 hora,7,Otro,86,0.00550823
+1,Hombre,4,Más de 1 hora y hasta 2,1,"Camión, taxi, combi o colectivo",1369,0.291711059
+1,Hombre,4,Más de 1 hora y hasta 2,3,"Vehículo particular (automóvil, camioneta o motocicleta)",596,0.126997656
+1,Hombre,4,Más de 1 hora y hasta 2,4,Transporte laboral,1068,0.227572981
+1,Hombre,4,Más de 1 hora y hasta 2,5,Bicicleta,32,0.006818666
+1,Hombre,4,Más de 1 hora y hasta 2,6,Caminando,154,0.032814831
+1,Hombre,4,Más de 1 hora y hasta 2,7,Otro,17,0.003622416
+1,Hombre,5,Más de 2 horas,1,"Camión, taxi, combi o colectivo",354,0.429090909
+1,Hombre,5,Más de 2 horas,3,"Vehículo particular (automóvil, camioneta o motocicleta)",78,0.094545455
+1,Hombre,5,Más de 2 horas,4,Transporte laboral,136,0.164848485
+1,Hombre,5,Más de 2 horas,6,Caminando,22,0.026666667
+1,Hombre,5,Más de 2 horas,7,Otro,23,0.027878788
+2,Mujer,1,Hasta 15 minutos,1,"Camión, taxi, combi o colectivo",1356,0.095218032
+2,Mujer,1,Hasta 15 minutos,3,"Vehículo particular (automóvil, camioneta o motocicleta)",1415,0.099361
+2,Mujer,1,Hasta 15 minutos,4,Transporte laboral,53,0.003721649
+2,Mujer,1,Hasta 15 minutos,6,Caminando,3071,0.215644969
+2,Mujer,1,Hasta 15 minutos,7,Otro,14,0.000983077
+2,Mujer,2,16 a 30 minutos,1,"Camión, taxi, combi o colectivo",4559,0.201922225
+2,Mujer,2,16 a 30 minutos,3,"Vehículo particular (automóvil, camioneta o motocicleta)",1701,0.075338825
+2,Mujer,2,16 a 30 minutos,4,Transporte laboral,479,0.021215342
+2,Mujer,2,16 a 30 minutos,6,Caminando,1079,0.047789884
+2,Mujer,3,31 minutos a 1 hora,1,"Camión, taxi, combi o colectivo",3679,0.235636969
+2,Mujer,3,31 minutos a 1 hora,3,"Vehículo particular (automóvil, camioneta o motocicleta)",894,0.057259976
+2,Mujer,3,31 minutos a 1 hora,4,Transporte laboral,1122,0.071863191
+2,Mujer,3,31 minutos a 1 hora,6,Caminando,118,0.007557804
+2,Mujer,4,Más de 1 hora y hasta 2,1,"Camión, taxi, combi o colectivo",746,0.158960153
+2,Mujer,4,Más de 1 hora y hasta 2,3,"Vehículo particular (automóvil, camioneta o motocicleta)",205,0.04368208
+2,Mujer,4,Más de 1 hora y hasta 2,4,Transporte laboral,496,0.105689325
+2,Mujer,4,Más de 1 hora y hasta 2,6,Caminando,10,0.002130833
+2,Mujer,5,Más de 2 horas,1,"Camión, taxi, combi o colectivo",165,0.2
+2,Mujer,5,Más de 2 horas,3,"Vehículo particular (automóvil, camioneta o motocicleta)",27,0.032727273
+2,Mujer,5,Más de 2 horas,4,Transporte laboral,20,0.024242424
