@@ -1,10 +1,12 @@
 import PySimpleGUI as sg
 
+sg.theme("BrightColors")
+
 def crearVentanaPrincipal():
     vacunas = ["Pfizer", "Moderna", "AstraZeneca", "Sputnik", "Sinovac", "Cansino"]
     layout = [
         [sg.Text("Hola, soy un texto", font="Arial 30"),
-         sg.Text("Yo también")],
+         sg.Text("Yo también", text_color="red", background_color="white")],
         [sg.Button("Soy un botón", key="botón1", image_filename="eeeve.png"),
          sg.Button("Soy otro botón", key="botón2")],
         [sg.Text("Correo:"),
@@ -19,7 +21,12 @@ def crearVentanaPrincipal():
         [sg.Text("Hobbies"),
          sg.Checkbox("Ver series", key="check series"),
          sg.Checkbox("Ver películas", key="check películas"),
-         sg.Checkbox("Escuchar música", key="check música")]
+         sg.Checkbox("Escuchar música", key="check música")],
+        [sg.Text("Slider"),
+         sg.Slider(range=(1,10), key="slider", orientation="horizontal")],
+        [sg.Text("Spinbox"),
+         sg.Spin(("Uno", "Dos", "Tres"), key="spin", initial_value="Dos")],
+        [sg.Image("eeeve.png")]
         ]
     return sg.Window("Mi ventana principal", layout, finalize=True)
 
