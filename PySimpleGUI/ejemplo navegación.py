@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 import pandas as pd
+import webbrowser
 
 def crearVentanaInicioSesion():
     layout = [
@@ -83,6 +84,8 @@ def crearVentanaMenuPrincipal():
         [sg.Text("Menú principal")],
         [sg.Button("Tabla de datos", key="tabla datos")],
         [sg.Button("Formulario", key="formulario")],
+        [sg.Button("Multimedia", key="multimedia")],
+        [sg.Button("Mapa", key="mapa")],
         [sg.Button("Salir", key="salir")],
         ]
     return sg.Window("Menú Principal", layout, finalize=True)
@@ -181,3 +184,9 @@ while True:
         #window.close()
         #ventanaFormulario = None
         #ventanaMenuPrincipal = crearVentanaMenuPrincipal()
+    
+    elif event == "multimedia":
+        webbrowser.open("http://www.youtube.com")
+    
+    elif event == "mapa":
+        webbrowser.open("http://maps.google.com")
