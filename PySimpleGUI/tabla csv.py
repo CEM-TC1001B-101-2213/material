@@ -8,9 +8,17 @@ def crearVentanaTablaDatos():
     columnas = datos.columns.tolist()
     # Mostraremos las primeras 10 filas
     valores = datos.head(10).values.tolist()
+    suma = datos["ULT"].sum()
+    promedio = datos["ULT"].mean()
+    maximo = datos["ULT"].max()
+    minimo = datos["ULT"].min()
     layout = [
         [sg.Text("Tabla de IME 2020")],
-        [sg.Table(headings=columnas, values=valores)]
+        [sg.Table(headings=columnas, values=valores)],
+        [sg.Text(f"Suma: {suma}")],
+        [sg.Text(f"Promedio: {promedio}")],
+        [sg.Text(f"Máximo: {maximo}")],
+        [sg.Text(f"Mínimo: {minimo}")]
         ]
     return sg.Window("Datos IME 2020", layout, finalize=True)
 
