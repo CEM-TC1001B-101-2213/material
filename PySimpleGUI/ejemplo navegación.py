@@ -44,14 +44,45 @@ def crearVentanaTablaDatos():
         [sg.Text(f"Promedio: {promedio}")],
         [sg.Text(f"Máximo: {maximo}")],
         [sg.Text(f"Mínimo: {minimo}")],
-        [sg.Button("Menú Principal", key="Datos Menú Principal")]
+        [sg.Button("Menú Principal", key="Datos volver")]
         ]
     return sg.Window("Datos IME 2020", layout, finalize=True)
+
+def crearVentanaFormulario():
+    opciones = ["Muy Bajo", "Bajo", "Medio", "Alto", "Muy Alto"]
+    layout = [
+        [sg.Text("CVE _ENT"),
+         sg.Input(key="CVE_ENT")],
+        [sg.Text("NOM_ENT"),
+         sg.Input(key="NOM_ENT")],
+        [sg.Text("POB_TOT"),
+         sg.Input(key="POB_TOT")],
+        [sg.Text("ANALF"),
+         sg.Input(key="ANALF")],
+        [sg.Text("SBASC"),
+         sg.Input(key="SBASC")],
+        [sg.Text("OVSDE"),
+         sg.Input(key="OVSDE")],
+        [sg.Text("OVSEE"),
+         sg.Input(key="OVSEE")],
+        [sg.Text("IM_2020"),
+         sg.Input(key="IM_2020")],
+        [sg.Text("GM_2020"),
+         sg.Combo(opciones, key="GM_2020")],
+        [sg.Text("IMN_2020"),
+         sg.Input(key="IMN_2020")],
+        [sg.Text("ULT"),
+         sg.Input(key="ULT")],
+        [sg.Button("Registrar", key="Formulario registrar"),
+         sg.Button("Volver", key="Formulario volver")]
+        ]
+    return sg.Window("Formulario de datos", layout, finalize=True)
 
 def crearVentanaMenuPrincipal():
     layout = [
         [sg.Text("Menú principal")],
-        [sg.Button("Tabla de dato", key="tabla datos")],
+        [sg.Button("Tabla de datos", key="tabla datos")],
+        [sg.Button("Formulario", key="formulario")],
         [sg.Button("Salir", key="salir")],
         ]
     return sg.Window("Menú Principal", layout, finalize=True)
@@ -60,6 +91,7 @@ ventanaInicioSesion = crearVentanaInicioSesion()
 ventanaRegistro = None
 ventanaMenuPrincipal = None
 ventanaTablaDatos = None
+ventanaFormulario = None
 
 while True:
     window, event, values = sg.read_all_windows()
@@ -98,3 +130,33 @@ while True:
         window.close()
         ventanaRegistro = None
         ventanaInicioSesion = crearVentanaInicioSesion()
+        
+    # Menú Principal -> Tabla de datos
+    elif window == ventanaMenuPrincipal and event == "tabla datos" and ventanaTablaDatos is None:
+        window.close()
+        ventanaMenuPrincipal = None
+        ventanaTablaDatos = crearVentanaTablaDatos()
+    
+    # Tabla de datos -> Menú Principal
+    elif window == ventanaTablaDatos and event == "Datos volver" and ventanaMenuPrincipal is None:
+        window.close()
+        ventanaTablaDatos = None
+        ventanaMenuPrincipal = crearVentanaMenuPrincipal()
+    
+    # Menú Principal -> Formulario
+    elif window == ventanaMenuPrincipal and event == "formulario" and ventanaFormulario is None:
+        window.close()
+        ventanaMenuPrincipal = None
+        ventanaFormulario = crearVentanaFormulario()
+    
+    # Formulario -> Menú Principal (volver)
+    elif window == ventanaFormulario and event == "Formulario volver" and ventanaMenuPrincipal is None:
+        window.close()
+        ventanaFormulario = None
+        ventanaMenuPrincipal = crearVentanaMenuPrincipal()    
+    
+    # Formulario -> Menú Principal (registrar)
+    elif window == ventanaFormulario and event == "Formulario registrar" and ventanaMenuPrincipal is None:
+        window.close()
+        ventanaFormulario = None
+        ventanaMenuPrincipal = crearVentanaMenuPrincipal()
