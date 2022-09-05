@@ -51,7 +51,7 @@ def crearVentanaTablaDatos():
 def crearVentanaFormulario():
     opciones = ["Muy Bajo", "Bajo", "Medio", "Alto", "Muy Alto"]
     layout = [
-        [sg.Text("CVE _ENT"),
+        [sg.Text("CVE_ENT"),
          sg.Input(key="CVE_ENT")],
         [sg.Text("NOM_ENT"),
          sg.Input(key="NOM_ENT")],
@@ -157,6 +157,27 @@ while True:
     
     # Formulario -> Menú Principal (registrar)
     elif window == ventanaFormulario and event == "Formulario registrar" and ventanaMenuPrincipal is None:
-        window.close()
-        ventanaFormulario = None
-        ventanaMenuPrincipal = crearVentanaMenuPrincipal()
+        nuevo_registro = {
+            "CVE_ENT": values["CVE_ENT"],
+            "NOM_ENT": values["NOM_ENT"],
+            "POB_TOT": values["POB_TOT"],
+            "POB_TOT": values["POB_TOT"],
+            "ANALF": values["ANALF"],
+            "SBASC": values["SBASC"],
+            "OVSDE": values["OVSDE"],
+            "OVSEE": values["OVSEE"],
+            "IM_2020": values["IM_2020"],
+            "IM_2020": values["IM_2020"],
+            "GM_2020": values["GM_2020"],
+            "IMN_2020": values["IMN_2020"],
+            "ULT": values["ULT"]
+            }
+        datos = pd.read_csv("IME_2020.csv")
+        datos = datos.append(nuevo_registro, ignore_index=True)
+        datos.to_csv("IME_2020.csv", index = False)
+        
+        sg.Popup("Se ha guardado el registro.", title="Éxito")
+        
+        #window.close()
+        #ventanaFormulario = None
+        #ventanaMenuPrincipal = crearVentanaMenuPrincipal()
